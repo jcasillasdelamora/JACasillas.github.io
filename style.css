@@ -1,5 +1,5 @@
 body{
-  background-image: url("_91a40c03-49ca-4c98-a919-2f8987521c1c.jpg");
+  background-color:black;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -19,6 +19,6 @@ nav{
 }
 a {
   transition: 100s;
-  font-size: 10px;
+  font-size: 17px;
 
 }
