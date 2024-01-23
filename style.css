@@ -15,10 +15,20 @@ nav{
   justify-content: space-around;
   background-color: rgba(444,444,444,.2);
   border-radius: 4px;
-  padding: 6px;
+  padding: 7px;
 }
-a {
-  transition: 100s;
+a{
   font-size: 17px;
+
+
+}
+a:hover{
+  transition-duration: 1s;
+  background-color: black;
+  color: burlywood;
+  border-radius: 3px;
+  box-shadow: white;
+
+
 
 }

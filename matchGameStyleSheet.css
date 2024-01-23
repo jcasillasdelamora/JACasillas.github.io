@@ -1,0 +1,53 @@
+td{
+  border-style: solid;
+  border-radius: 5px;
+  border-color: white;
+  height: 50px;
+  width: 55px;
+  text-align: center;
+  box-shadow: 5px 5px 15px,white;
+  transition-duration: 1s;
+}
+td:hover{ background-color: rgba(144,222,722,.6);
+  border-color: red; border-radius: 9px}
+
+
+
+table{
+  margin: 0 auto;
+
+}
+body{
+  background-color: #08052b;
+  font-family: "Bookman Old Style";
+  color: white;
+}
+.btn{
+  margin: 0 auto;
+  background-color: green;
+  text-align: center;
+  border-color: black;
+  border-radius: 5px;
+  height: 25px;
+  width: 65px;
+  padding: 10px;
+  transition-duration: 1s;
+}
+.btn:hover{
+  box-shadow: 15px 15px 25px,white;
+  background-color: rgba(444,444,444,.4);
+  border-style: double;
+  border-color: black;
+}
+.message{
+  font-size: 10px;
+  margin: 0 auto;
+  text-align: center;
+  border-style: dashed;
+  border-color: black;
+  border-radius: 5px;
+  height: 25px;
+  width: 215px;
+  padding: 1px;
+  color: goldenrod;
+}
