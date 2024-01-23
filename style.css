@@ -1,0 +1,24 @@
+body{
+  background-image: url("_91a40c03-49ca-4c98-a919-2f8987521c1c.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+  font-family: "Calibri Light";
+
+}
+nav{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(444,444,444,.2);
+  border-radius: 4px;
+  padding: 6px;
+}
+a {
+  transition: 100s;
+  font-size: 10px;
+
+}
