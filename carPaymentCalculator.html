@@ -1,0 +1,57 @@
+<!doctype html>
+<html class="no-js" lang="" xmlns="http://www.w3.org/1999/html">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link href="carPaymentStyleSheet.css" rel="stylesheet" type="text/css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+<!-- Add your site or application content here -->
+<h1>Car Payment Estimate</h1>
+<div class="Main">
+  <div class="leftmain">
+
+    <label for="cost">Car Cost</label>
+    <input id="cost" type="number" value=50000>
+    <label for="down">Down Payment</label>
+    <input id="down" type="number" value=5000>
+    <label for="rate">Expected Annual Interest Rate</label>
+    <input id="rate" type="number" value=5>
+    <label for="years">Term of Loan (Years)</label>
+    <input id="years" type="number" value=4>
+    <label for="tax">State Tax (Optional)</label>
+    <input id="tax" name="tx" type="number">
+    <button id="summit">Summit</button>
+  </div>
+  <div class="rightMain">
+    <h2>Loan Summary</h2>
+    <table>
+      <tr><td>Total</td><td>Principal</td><td>Interest</td><td>Monthly Payment</td></tr>
+      <tr><td id="outTotal">$ 0</td><td id="outPrincipal">$ 0</td><td id="outInterest">$ 0</td><td id="outMonthly">$ 0</td></tr>
+    </table>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+<script src="carPaymentCalc.js"></script>
+
+</body>
+
+</html>

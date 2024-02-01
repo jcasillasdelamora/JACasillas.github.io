@@ -1,0 +1,65 @@
+h1{
+  text-align: center;
+  color:	#2A3439;
+  background-color: rgba(222,222,222, .4);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+}
+.Main{
+  display: flex;
+  flex-direction: row;
+  flex-grow: revert;
+
+}
+.leftmain{
+  width: 120px;
+  margin: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 60px;
+  box-shadow: 5px 5px 5px black;
+  background-color: rgba(222,222,222,.4);
+}
+.rightMain{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  margin: 20px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  padding: 1px;
+  box-shadow: 5px 5px 5px black;
+  background-color: rgba(222,222,222,.4);
+  color: black;
+}
+
+body{
+  font-family: DialogInput Georgia;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+  color: white;
+}
+input{
+  border-radius: 5px;
+}
+button{
+  margin: 10px;
+  border-radius: 7px;
+
+}
+table{
+  border-style: solid;
+  border-radius: 7px;
+}
+h2{
+  text-align: center;
+  background-color: lightcoral;
+  border-radius: 4px;
+}
+td{
+  text-align: center;
+}
+
+
