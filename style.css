@@ -9,7 +9,7 @@ body{
   color: white;
 }
 nav{
-  color: white;
+
   display: flex;
   flex-direction: row;
   justify-content: space-around;

@@ -1,15 +1,22 @@
 
 let n_months = 12;
-
+let monthlyPayments
 
 
 //Summit Button Function
 document.getElementById("summit").onclick = function (){
+  // Original Principal
   principal = document.getElementById("cost").value;
+  let carCost = principal;
   downPayment = document.getElementById("down").value;
+  // After Tax
+  stateTax = ((document.getElementById("tax").value)/100)+1;
+  principal = principal*stateTax;
+  let afterTax = principal;
+  //After Down Payment
   principal = principal-downPayment;
-  stateTax = (document.getElementById("tax").value)/100;
-  principal = principal+(principal*stateTax);
+  let afterDown = principal;
+
 
   r_interestRate = document.getElementById("rate").value;
   r_interestRate = r_interestRate/100;
@@ -19,18 +26,8 @@ document.getElementById("summit").onclick = function (){
 
 
 
-  let monthlyPayments = principal*((r_monthlyInteresrRate*((1+r_monthlyInteresrRate)**t_timeMonths))/(((1+r_monthlyInteresrRate)**t_timeMonths)-1));
+  monthlyPayments = principal*((r_monthlyInteresrRate*((1+r_monthlyInteresrRate)**t_timeMonths))/(((1+r_monthlyInteresrRate)**t_timeMonths)-1));
   totalFutureCost = monthlyPayments*(t_timeMonths);
-
-
-
-
-
-
-
-
-
-
 
 
   console.log("principal is $"+principal);
@@ -42,15 +39,29 @@ document.getElementById("summit").onclick = function (){
   console.log("Total Loan $"+totalFutureCost);
 
 
-
-
-
-  document.getElementById("outTotal").innerText= "$ "+(Math.round(totalFutureCost));
-  document.getElementById("outPrincipal").innerHTML ="$ "+ Math.round(principal);
-  document.getElementById("outInterest").innerHTML ="$ "+ Math.round(totalFutureCost - principal);
-  document.getElementById("outMonthly").innerHTML = "$ " +Math.round(monthlyPayments);
-
-
+  document.getElementById("outCost").innerText= "- $ "+(Math.round(carCost));
+  document.getElementById("outAfterTax").innerHTML ="- $ "+ Math.round(afterTax);
+  document.getElementById("outAfterDown").innerHTML ="- $ "+ Math.round(afterDown);
+  document.getElementById("outInterest").innerHTML ="- $ "+ Math.round(totalFutureCost-principal);
+  document.getElementById("outTotal").innerHTML ="- $ "+ Math.round(totalFutureCost);
+  document.getElementById("outMonthly").innerHTML = "- $ " +Math.round(monthlyPayments);
 
 }
 
+document.getElementById("subButton").onclick = function (){
+  let lastMessage ="";
+  let myMonthlyIncome = document.getElementById("monthlyIncome").value;
+  let percentage = document.getElementById("percentOfIncome").value;
+  let idealCarPayment = Math.round(myMonthlyIncome*((percentage/100)));
+  lastMessage = "Based on your $ "+myMonthlyIncome+" monthly income, the ideal car payment should be $"+
+    idealCarPayment+" , given that the car payment is $"+ Math.round(monthlyPayments)+ " this means that "+canAfford(monthlyPayments,myMonthlyIncome);
+
+  document.getElementById("response").innerHTML = lastMessage;
+
+}
+
+let canAfford = function (carPayment,monthlyIncome){
+  let ny = monthlyIncome>=carPayment;
+  if(ny){ return "you can afford this car"}
+  else{return "you can not afford this car"}
+}

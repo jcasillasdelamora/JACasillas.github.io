@@ -37,15 +37,39 @@
     <label for="years">Term of Loan (Years)</label>
     <input id="years" type="number" value=4>
     <label for="tax">State Tax (Optional)</label>
-    <input id="tax" name="tx" type="number">
+    <input id="tax" name="tx" type="number" value="7">
     <button id="summit">Summit</button>
   </div>
   <div class="rightMain">
-    <h2>Loan Summary</h2>
-    <table>
-      <tr><td>Total</td><td>Principal</td><td>Interest</td><td>Monthly Payment</td></tr>
-      <tr><td id="outTotal">$ 0</td><td id="outPrincipal">$ 0</td><td id="outInterest">$ 0</td><td id="outMonthly">$ 0</td></tr>
-    </table>
+
+      <div class="half_left">
+
+      <table>
+        <tr><td>Car Cost</td> <td id="outCost">$---------</td></tr>
+        <tr><td>After Tax</td> <td id="outAfterTax">$---------</td></tr>
+        <tr><td>After Down Payment</td> <td id="outAfterDown">$---------</td></tr>
+        <tr><td>Interest</td> <td id="outInterest">$---------</td></tr>
+        <tr><td>Total Loan</td> <td id="outTotal">$---------</td></tr>
+        <tr><td>Monthly Payment</td> <td id="outMonthly">$---------</td></tr>
+      <!--   <tr><td id="outTotal">$ 0</td><td id="outPrincipal">$ 0</td><td id="outInterest">$ 0</td><td id="outMonthly">$ 0</td></tr> -->
+      </table>
+      </div>
+     <div class="half_right">
+      <h2>Can I Afford this Car?</h2>
+       <div class="inputs">
+         <label for="monthlyIncome">Your Monthly Income</label>
+         <input type="number" id="monthlyIncome" value="600">
+
+       </div>
+       <div class="inputs">
+         <label for="percentOfIncome">Percentage of Income going to Car Payment (20% or less is ideal) </label>
+         <input type="number" id="percentOfIncome" value="20">
+       </div>
+       <div class="inputs">
+         <button id="subButton">Summit</button>
+       </div>
+       <p id="response"></p>
+     </div>
   </div>
 </div>
 

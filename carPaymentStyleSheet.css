@@ -4,6 +4,7 @@ h1{
   background-color: rgba(222,222,222, .4);
   border-radius: 5px;
   box-shadow: 5px 5px 5px black;
+  height: 70px;
 }
 .Main{
   display: flex;
@@ -14,28 +15,50 @@ h1{
 .leftmain{
   width: 120px;
   margin: 20px;
-  border-style: solid;
+
   border-radius: 5px;
-  padding: 60px;
+  padding: 90px;
   box-shadow: 5px 5px 5px black;
   background-color: rgba(222,222,222,.4);
 }
 .rightMain{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   width:100%;
   margin: 20px;
-  border-style: solid;
-  border-color: white;
+
   border-radius: 5px;
-  padding: 1px;
+  padding: 40px;
   box-shadow: 5px 5px 5px black;
   background-color: rgba(222,222,222,.4);
   color: black;
 }
+.half_right{
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  width: 50%;
+  height: 100%;
+  box-shadow: 5px 5px 5px black;
+  padding: 5px;
+
+
+
+}
+.half_left{
+  display: flex;
+  flex-direction: row;
+  order: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.h2_left{
+}
 
 body{
-  font-family: DialogInput Georgia;
+  font-family: Inconsolata;
   background-color: #4158D0;
   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   background-size: cover;
@@ -45,6 +68,8 @@ body{
 }
 input{
   border-radius: 5px;
+  background-color: rgba(444,444,444 , .4);
+  color: #222222;
 }
 button{
   margin: 10px;
@@ -52,16 +77,42 @@ button{
 
 }
 table{
-  border-style: solid;
-  border-radius: 7px;
+
+
+  width: 100%;
+  height: 100%;
 }
 h2{
   text-align: center;
-  background-color: lightcoral;
+  background-color: rgba(225,225,225, .4);
   border-radius: 4px;
 }
 td{
-  text-align: center;
+  text-align: left;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px black;
+  transition-duration: 1s;
 }
 
+div{
+  border-radius: 5px;
+  padding: 10px;
 
+}
+td:hover{
+  box-shadow: 1px 1px 1px white;
+}
+
+.inputs.outputs{
+  border-style: solid;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 50%;
+}
+button{
+  transition-duration: 1s;
+}
+button:hover{
+  box-shadow: 7px 7px 7px grey  ;
+}
