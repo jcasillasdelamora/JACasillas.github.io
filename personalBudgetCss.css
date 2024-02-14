@@ -1,0 +1,36 @@
+body{
+  font-family: "Roboto Light", "Helvetica", "Times New Roman";
+}
+.h1_header{
+  background-image: url("https://images.unsplash.com/photo-1564939558297-fc396f18e5c7?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 700px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-color: #f8e1b3;
+  color: #bf9f66;
+  text-shadow: 2px 2px grey;
+}
+.h2_backStory{
+  padding: 30px;
+  font-size: 40px;
+}
+.h3_theMethod{
+  text-align: center;
+  font-size: 35px;
+}
+.rowFlexDiv{
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.rowFlexDiv_subDiv_ColumFLex{
+  width: 50%;
+  height: 600px;
+  box-shadow: 5px 5px 5px grey;
+  overflow: scroll;
+}
+.speech{
+  font-size: 35px;
+  padding: 16px;
+}
