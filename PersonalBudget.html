@@ -39,7 +39,25 @@
   </div>
 </div>
   <h2  class="expenses">Your Expenses and Bills</h2>
-  <h3></h3>
+    <div class="rowFlexDiv">
+      <div class="expenseInputDiv">
+        <h2 style="text-align: center" >Expenses</h2>
+        <button class="expensesButton" id="expAnnually">Annually</button>
+        <button class="expensesButton" id="expMonthly">Monthly</button>
+        <button class="expensesButton" id="expWeekly">Weekly</button>
+        <button class="expensesButton" id="expDaily">Daily</button>
+        <label for="expenseName" class="LabelInput">Type of Expense</label>
+        <input type="text" id="expenseName" class="Input">
+        <label for="expenseCost" class="LabelInput" >Cost</label>
+        <input type="number" id="expenseCost" class="Input">
+        <button class="expensesButton">Summit</button>
+      </div>
+      <div class="expenseLayoutDiv">
+
+      </div>
+    </div>
+
+
   <p>J A.Casillas de la Mora, L. de la Rosa</p>
   <script src="personalBudgetJS.js"></script>
 </body>

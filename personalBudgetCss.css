@@ -67,6 +67,32 @@ body{
 
 
 }
+.expenseInputDiv{
+  height: 650px;
+  width: 400px;
+  border-style: solid;
+  border-color: black;
+  overflow: clip;
+}
+.expenseLayoutDiv{
+  height: 650px;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  overflow: clip;
+}
+.expensesButton{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 40px;
+
+
+}
+.expensesButton:active{
+  background-color: red;
+  transition-duration: 700ms;
+}
 .LabelInput{
   font-size: 40px;
   padding: 5px;
