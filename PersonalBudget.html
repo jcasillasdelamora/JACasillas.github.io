@@ -22,9 +22,10 @@
   <h2 class="income">Your Income</h2>
 <div class="rowFlexDiv">
   <div class="rewFlexDiv_subDiv3">
-    <h2 style="text-align: center">How Often Do You Get Paid?</h2>
+    <h2 style="text-align: center">How would you like to base your yearly budget on income frequency</h2>
     <div class="divButton" id="weeklyButton">Weekly</div>
     <div class="divButton" id="biweeklyButton">BiWeekly</div>
+    <div class="divButton" id="AnnualButton">Yearly</div>
   </div>
   <div class="rewFlexDiv_subDiv3">
     <h2 style="text-align: center">How Much Do You Get Paid?</h2>
@@ -35,10 +36,10 @@
   <div class="rewFlexDiv_subDiv3">
     <h2 style="text-align: center">Estimated Yearly Budget</h2>
     <h2 class="h2_backStory" style="text-align: center" id="outYBudget"> -$ 0.00</h2>
-    <img src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" height="50%" width="100%">
+
   </div>
 </div>
-  <h2  class="expenses">Your Expenses and Bills</h2>
+  <h2  class="expenses">Essential Expenses</h2>
     <div class="rowFlexDiv">
       <div class="expenseInputDiv">
         <h2 style="text-align: center" >Expenses</h2>
@@ -50,10 +51,22 @@
         <input type="text" id="expenseName" class="Input">
         <label for="expenseCost" class="LabelInput" >Cost</label>
         <input type="number" id="expenseCost" class="Input">
-        <button class="expensesButton">Summit</button>
+        <button class="expensesButton" id="expensesButton">Summit</button>
       </div>
-      <div class="expenseLayoutDiv">
-
+      <div class="expenseInputDiv2">
+        <h2 style="text-align: center" >Expenses Stack</h2>
+        <table class="eTable" id="eTable_">
+          <tr class="e_tr"><td >Name</td><td >Cost</td><td >Frequency</td><td >Annual Cost</td></tr>
+        </table>
+        <table class="eTable">
+          <tr class="e_tr"><td id="e_1">Total Annual Cost</td><td id="e_2">$ 0.00</td></tr>
+          <tr class="e_tr"><td id="e_3">Budget Remainder</td><td id="e_4">$ 0.00</td></tr>
+        </table>
+      </div>
+      <div class="expenseInputDiv3">
+        <h2 style="text-align: center" >Budget Status</h2>
+        <div class="Expenses" id="e_expenses"></div>
+        <div class="budget" id="e_budget"></div>
       </div>
     </div>
 

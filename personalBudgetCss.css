@@ -72,7 +72,25 @@ body{
   width: 400px;
   border-style: solid;
   border-color: black;
-  overflow: clip;
+  overflow: auto;
+}
+.expenseInputDiv2{
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  overflow: auto;
+}
+.expenseInputDiv3{
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  width: 250px;
+  border-style: solid;
+  border-color: black;
+  overflow: auto;
 }
 .expenseLayoutDiv{
   height: 650px;
@@ -86,11 +104,11 @@ body{
   height: 50px;
   margin-bottom: 10px;
   font-size: 40px;
-
+  box-shadow: 5px 5px 5px #888888;
 
 }
 .expensesButton:active{
-  background-color: red;
+  box-shadow: 5px 5px 5px white;
   transition-duration: 700ms;
 }
 .LabelInput{
@@ -111,7 +129,7 @@ form{
   justify-content: center;
 }
 .divButton{
-  height: 37%;
+  height: 20.3%;
   width: 100%;
   border-style: solid;
   border-color: #888888;
@@ -148,4 +166,27 @@ form{
   box-shadow: 5px 5px 5px white;
   color: black;
 
+}
+.eTable{
+  width: 100%;
+}
+.e_tr{
+  text-align: center;
+  font-size: 40px;
+}
+.budget{
+
+  background-color: darkgreen;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  transition-duration: 1s;
+
+}
+.Expenses{
+  background-color: darkred;
+  width: 100%;
+  height: 0%;
+  border-radius: 6px;
+  transition-duration: 1s;
 }
