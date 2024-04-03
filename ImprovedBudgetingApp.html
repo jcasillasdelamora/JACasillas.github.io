@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link href="improvedBudgetAppCSS.css" type="text/css" rel="stylesheet">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <main>
+    <div class="introContainer">
+      <nav class="topNav" > <a class="topNavLink" href="#start" >- Getting Started -</a>  <a class="topNavLink" href="#expenses">- Consolidating Expenses -</a>  <a class="topNavLink" href="#financialGoals">- Financial Goals -</a>  <a class="topNavLink">- Planning for the Fun Stuff -</a> </nav>
+      <div class="mainTitleDiv"> <h1 class="personalBudgeting">Personal Budgeting</h1></div>
+    </div>
+  </main>
+
+  <div class="gettingStartedContainer">
+     <h1 class="gettingStartedTitle" id="start">Getting Started</h1>
+     <p class="pStyle">To get started, you will simply input your yearly income, this can be done by calculation your income based on a weekly, biweekly salary
+     or if you know how much you make in a year you can simply input that. Ones we establish your income then we can start by adding up all your
+     living expenses, the expenses that you dont have the luxury to default. The end goal of this program is to make light of the money that has to be reserved in order to maintain those expenses and see how the
+     remainder can be used to pay off debt or invest in your future, as well as to set a responsible going out and vacation fund</p>
+    <h1 class="gettingStartedTitleInput">Calculating Your Initial Budget</h1>
+
+    <div class="annualBudgetInputDiv">
+      <button class="button1" id="weeklyButton">Weekly Pay</button> <button class="button1" id="biweeklyButton">Biweekly Pay</button> <button class="button1" id="yearlyButton">Annual Pay</button>
+      <div class="budgetDiv"> <div class="incomeBlocks" id="payTypeText">Pay Type?</div> <input type="number" value="0.00" id="income"  style="font-size: 30px" > <button class="button1" id="enterBtnAnnualBudget">Enter</button> <div class="incomeBlocks" id="showAnnualBudget">Your Annual Budget</div> </div>
+    </div>
+
+  </div>
+  <nav class="miniNav"> <a class="minNavLink" href="#expenses">Next: Consolidating Expenses</a> </nav>
+
+  <h1 class="titleDiv" id="expenses">Consolidating Expenses</h1>
+  <div class="expensesContainer">
+    <div class="expensesForm">
+      <h2 class="subTitle"><u>Expenses Input</u></h2>
+      <label class="Input">Expense Type</label>
+      <input class="Input" type="text" id="expenseInputType">
+      <label class="Input" for="times">How often do have to pay?
+      </label>
+      <select id="times" class="Input" id="expenseOptionTimes">
+        <option value="year">Every Year</option>
+        <option value="6months">Every 6 Months</option>
+        <option value="monthly">Every Month</option>
+        <option value="biweekly">Every 2 Weeks</option>
+        <option value="week">Every Week</option>
+        <option value="day">Every Day</option>
+        <option value="oneTime">One Time</option>
+      </select>
+      <label class="Input" for="expenseCost">How much do you pay?</label>
+      <input class="Input" type="number" id="expenseCost" value="0.00">
+      <button class="Input" id="expenseEnter">Enter</button>
+    </div>
+    <div class="expensesTable">
+      <h2 class="subTitle"><u>Expenses Table</u></h2>
+      <table class="eTable" id="eTable">
+        <tbody>
+        <tr class="tr_space"> <td id="cell1" class="cell">Expense|</td> <td id="cell2" class="cell">Yearly Cost|</td> <td id="cell3" class="cell">Percent of Budget|</td> </tr>
+        </tbody>
+      </table>
+      <h2 class="totalExpBreakDown_h2">Total Expense Break Down</h2>
+      <table class="totalExBreakDownTable">
+        <tbody>
+        <p>+ The amount of you need to reserve for your expenses via a weekly and monthly breakdown.</p>
+        <tr> <td>| Yearly Cost</td> <td>| Monthly Cost</td> <td>| Weekly Cost|</td></tr>
+        <tr><td id="yearCostCell"></td> <td id="monthlyCostCell"></td> <td id="weeklyCostCell"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="expensesRemainder">
+      <ul class="listE">
+        <li>Starting Budget</li>
+        <li id="startingBudget"></li>
+        <li>Budget Remainder</li>
+        <li id="budgetRemainder"></li>
+        <li>Yearly Expenses</li>
+        <li id="yearlyExpenses"></li>
+
+      </ul>
+      <div class="barGraphBlank" id="barGraphBlank"></div>
+      <div class="barGraph" id="barGraph"></div>
+
+    </div>
+  </div>
+
+  <nav class="miniNav"><a class="minNavLink" href="#start">Back to Initial Budget</a> <a class="minNavLink" href="#financialGoals">Next to Financial Goals</a> </nav>
+
+  <div class="spaceDiv">
+  </div>
+  <h2 class="titleDiv" id="financialGoals">Financial Goals</h2>
+  <div class="financialGoalsContainer">
+    <div class="financialGoalsFirstSubDiv">
+      <h2 style="font-size: 38px">The things I want to Save for and the things I want to pay off....</h2>
+      <p style="font-size: 25px">+ In this section we are going to explore the ways in which we can set a financial goal, for example paying off
+      a debt in a given time or saving up for something.</p>
+    </div>
+    <div class="financialGoalsFirstSubMini">
+      <h2 class="subBidgetDiv">Your Monthly Budget After Expenses is? </h2>
+      <input  class="Input" type="number" id="monthlyBudgetAfterExpenses">
+      <button class="Input" id="monthlyBudgetAfterExpensesButton">Summit</button>
+    </div>
+    <div class="SavingsDiv">
+      <div class="savingsSubDiv1">
+        <h2 class="h2SubTitle">I Want to Save-up or Paying-Off ?</h2>
+        <input type="text" id="savingsOrPayingOff" placeholder="Ex: My Credit Card" class="Input">
+        <h2 class="h2SubTitle">How much is it ?</h2>
+        <input type="number" id="savingOrPayingOffCost" placeholder="Enter Amount $" class="Input">
+      </div>
+      <div class="savingsSubDiv1">
+        <h2 class="h2SubTitle">In how many months are you giving yourself to achieve this goal?</h2>
+        <input type="number" id="savingOrPayingOffTime" placeholder="Number of Months" class="Input">
+        <button class="Input" id="savingOrPayingOffSummitBtn">Try</button>
+        <h2 class="h2SubTitle" id="savingOrPayingOffTotal">- Monthly Total -</h2>
+        <h2 class="h2SubTitle" id="savingOrPayingOffPercentage">- Percentage of Monthly Budget -</h2>
+        <button class="Input" id="addToMonthlyExpenses">Add to Monthly Exp.</button>
+      </div>
+      <div class="savingsSubDiv1">
+        <table id="savingsTable" class="savingsTable">
+          <tbody>
+            <tr> <td class="savingsTableCells">Name</td> <td class="savingsTableCells">Number of Months</td> <td class="savingsTableCells">Monthly Cost</td> </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="savingsSubDiv1">
+        <h2 class="h2SubTitle">Starting Budget</h2>
+        <h2 class="h2SubTitle" id="startBudget">- $ 0.00/yr | $ 0.00/m -</h2>
+        <h2 class="h2SubTitle">Budget After Expenses</h2>
+        <h2 class="h2SubTitle" id="yearlyBudgetAfterExpenses">- $ 0.00 -</h2>
+        <h2 class="h2SubTitle">Budget After Goals</h2>
+        <h2 class="h2SubTitle" id="yearlyBudgetAfterGoals">- $ 0.00 -</h2>
+        <h2 class="h2SubTitle">Suggested Max Weekly Spending</h2>
+        <h2 class="h2SubTitle" id="weeklyBudgetRemainder">- $ 0.00 -</h2>
+
+      </div>
+    </div>
+
+  </div>
+  <nav class="miniNav"><a class="minNavLink" href="#start">Back: Initial Budget</a> <a class="minNavLink" href="#expenses">Back: Consolidating Expenses</a> <a class="minNavLink" href="#lastSlide">Next: Spreadsheet Breakdown</a> </nav>
+
+  <h2 class="titleDiv" id="lastSlide">Your Financial Spread Sheet Breakdown</h2>
+  <div class="lastSpreadsheetContainer">
+    <table class="lastTable" id="lastTable">
+      <tbody>
+        <tr><td class="lastTableCells">Expense</td> <td class="lastTableCells">Priority</td> <td class="lastTableCells">Reoccurrence</td> <td class="lastTableCells">Annual Cost</td> <td class="lastTableCells">Monthly Cost</td> <td class="lastTableCells">Weekly Cost</td> <td class="lastTableCells">After Cost Weekly Budget</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <nav class="miniNav"><a class="minNavLink" href="#start">Back: Initial Budget</a> <a class="minNavLink" href="#expenses">Back: Consolidating Expenses</a> <a class="minNavLink" href="#financialGoals">Back: Financial Goals</a> </nav>
+
+  <script src="js/app.js"></script>
+ <script src="improvedBudgetAppJS.js"></script>
+
+</body>
+
+</html>
